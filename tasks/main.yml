@@ -1,0 +1,10 @@
+---
+- name: Copy Compose File
+  copy:
+    src: files/{{ item }}
+    dest: /tmp/{{ item }}
+
+- name: Deploy Jenkins Master Server
+  docker_compose:
+    project_src: /tmp
+    state: present 
