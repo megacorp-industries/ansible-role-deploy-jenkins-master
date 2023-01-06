@@ -1,8 +1,8 @@
 ---
 - name: Copy Compose File
   copy:
-    src: files/{{ item }}
-    dest: /tmp/{{ item }}
+    src: files/
+    dest: /tmp
 
 - name: Deploy Jenkins Master Server
   docker_compose:
