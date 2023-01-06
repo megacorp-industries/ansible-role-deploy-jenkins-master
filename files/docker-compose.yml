@@ -2,7 +2,7 @@ version: '3.8'
 services:
   jenkins_master:
     build:
-      context: /tmp
+      context: /opt/jenkins-master
       dockerfile: Dockerfile
     container_name: jenkins-master
     user: root
