@@ -1,7 +1,8 @@
 version: '3.8'
 services:
   jenkins_master:
-    image: jenkins/jenkins:lts
+    build:
+      dockerfile: Dockerfile
     container_name: jenkins-master
     user: root
     environment:
