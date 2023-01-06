@@ -1,15 +1,15 @@
 ---
 - name: Create Docker directory
   file:
-    path: {{ WORKING_DIR }}/jenkins-master
-    state: present
+    path: "{{ WORKING_DIR }}/jenkins-master"
+    state: directory
     
 - name: Copy compose File
   copy:
     src: files/
-    dest: {{ WORKING_DIR }}/jenkins-master
+    dest: "{{ WORKING_DIR }}/jenkins-master"
 
 - name: Deploy Jenkins Master Server
   docker_compose:
-    project_src: {{ WORKING_DIR }}/jenkins-master
+    project_src: "{{ WORKING_DIR }}/jenkins-master"
     state: present
